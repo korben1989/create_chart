@@ -13,11 +13,10 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/starter-template/">
 
-    
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
-  <link href="{% static 'chart_app/css/assets/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'chart_app/css/assets/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'chart_app/css/input_file_eng.css' %}" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -172,9 +171,9 @@
 
     <form action="{% url 'index' %}" method="post" enctype="multipart/form-data" style="width:300px;">
       {% csrf_token %}
-    <p>{{ form.file }}</p>
-    <p>{{ form.timeframe }}</p>
-    <p>{{ form.ex_mov_average }}</p>
+      <p>{{ form.file }}</p>
+      <p>{{ form.timeframe }}</p>
+      <p>{{ form.ex_mov_average }}</p>
       <button class="btn btn-primary btn-lg px-4" type="submit">Send</button>
       <br>
 
